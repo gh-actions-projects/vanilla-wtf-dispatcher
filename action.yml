@@ -1,0 +1,21 @@
+name: Vanilla Wtf Dispatcher
+description: Simple Workflow Dispatcher
+inputs:
+  github_token:
+    description: provide the pat or token for further request ex. {{ secrets.GITHUB_TOKEN }}
+    required: true
+  workflowRef:
+    description: provide workflow branch ref ex. "main" or {{ github.ref_name }}
+    required: true
+  workflowName:
+    description: provide workflow file name ex. ci.yml
+    required: true
+  workflowPath:
+    description: provide the repository path ex. username/repository
+    required: true
+runs:
+  using: "node16"
+  main: "main.js"
+branding:
+  icon: terminal
+  color: gray-dark
