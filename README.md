@@ -9,7 +9,7 @@ Simple Workflow Dispatcher to invoke a workflow_dispatch withing the project
 
 ```yml
 - name: Workflow Dispatcher
-  uses: gh-actions-projects/vanilla-wtf-dispatcher@0.0.1
+  uses: gh-actions-projects/vanilla-wtf-dispatcher@0.0.2
   with:
     github_token: "${{ secrets.GITHUB_TOKEN }}"
     workflowRef: "${{ github.ref_name }}"
