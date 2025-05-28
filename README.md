@@ -14,7 +14,7 @@ Simple Workflow Dispatcher to invoke a workflow_dispatch withing the project
     github_token: "${{ secrets.GITHUB_TOKEN }}"
     workflowRef: "${{ github.ref_name }}"
     workflowName: "ci.yml"
-    repository: "username/nodejs-express-api-app"
+    workflowPath: "username/nodejs-express-api-app"
 ```
 
 ### Href

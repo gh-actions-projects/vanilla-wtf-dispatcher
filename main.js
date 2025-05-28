@@ -11,7 +11,7 @@ async function run() {
   const workflowPath = core.getInput("workflowPath", { required: true });
 
   const wf = `https://api.github.com/repos/${workflowPath}/actions/workflows/${workflowName}/dispatches`;
-  const payload = { "ref": workflowRef, "input": { "message": "" } };
+  const payload = { "ref": workflowRef, /* "input": { "message": "" } */ };
   const headers = {
     "Content-Type": "application/json",
     "Authorization": `Bearer ${github_token}`,
@@ -21,7 +21,7 @@ async function run() {
   try {
     await axios.post(wf, payload, { headers });
   } catch (error) {
-    console.error(error.message);
+    console.error(error);
   }
 }
 
